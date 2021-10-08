@@ -1,0 +1,22 @@
+
+*~
+
+# ignore the folders
+.stack-work/
+.vscode/
+test/
+others/
+
+
+# ignore the files
+*.yaml
+*.yaml.lock
+*.DS_Store/
+*stack*
+*.md
+LICENSE
+
+# ignore certain files
+# *Ch11.18*
+# *Ch12*
+*.DS_Store*

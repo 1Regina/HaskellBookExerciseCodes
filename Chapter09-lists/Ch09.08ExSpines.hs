@@ -1,0 +1,20 @@
+--Bottom madness
+--Q1  [ x^y | x <- [1..5],  y <- [2, undefined]] bottom
+--Q2  take 1 $ [ x^y | x <- [1..5],  y <- [2, undefined]] returns [1]
+--Q3  sum[1, undefined,3] bottom
+--Q4  length[1, 2, undefined] returns 3
+--Q5  length$[1, 2, 3]++undefined bottom
+--Q6  take 1 $ filter even [1, 2, 3, undefined] returns [2]
+--Q7  take 1 $ filter even [1, 3, undefined] bottom
+--Q8  take 1 $ filter odd [1, 3, undefined]  returns [1]
+--Q9  take 2 $ filter odd [1, 3, undefined] returns [1,3]
+--Q10 take 3 $ filter odd [1, 3, undefined] bottom
+
+--Intermission: Is it in normal form https://wiki.haskell.org/Weak_head_normal_form
+--Q1   [1, 2, 3, 4, 5]  is NF
+--Q2   1:2:3:4: _  is WHNF
+--Q3   enumFromTo 1 10 is WHFN bcos not yet evaluated
+--Q4   length[1, 2, 3, 4, 5] is WHFN bcos not yet evaluated
+--Q5   sum(enumFromTo 1 10) is WHFN bcos not yet evaluated 
+--Q6    ['a'..'m']++['n'..'z'] is Neither  because the outermost component of the expression is a function, ++, with arguments that are fully applied, but it hasn’t been evaluated.
+--Q7    (_, 'b') is WHNF bcos know its a tuple

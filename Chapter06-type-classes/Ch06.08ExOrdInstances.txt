@@ -1,0 +1,18 @@
+Anything with Ord class has implied Eq
+Q1 -> works
+  max (length [1,2,3]) (length [8, 9 , 10, 11, 12])
+= max 3 5
+= 5   
+
+Q2 -> works bcos compare has Ord instance ie implied Eq instance
+  compare (3 * 4) ( 3 * 5)
+= compare 12 15
+= LT
+
+Q3 -> wont work. Cannot compare Bool with string as True is not of type [Char]
+  compare "Julie" True
+
+Q4 -> work bcos can order the results
+  (5 + 3) > (3 + 6)
+ = 8 > 9
+ False

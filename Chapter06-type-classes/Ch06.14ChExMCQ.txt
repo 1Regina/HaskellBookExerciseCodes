@@ -1,0 +1,18 @@
+Q1. c
+The Eq class makes equality tests possible 
+
+Q2 b
+Ord type class is a subclass of Eq
+
+Q3 a
+type class Ord has an operator >. What is the type of >
+
+Ord a => a -> a -> Bool
+
+Q4 c
+x = divMod 16 12
+
+=> the type ofxis a tuple
+
+Q5 a
+The type class Integral includes Int and Integer numbers

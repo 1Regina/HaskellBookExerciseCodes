@@ -1,0 +1,10 @@
+
+data/**
+**/.*.swp
+.stack-work
+
+
+# *.yaml
+*.yaml.lock
+*.DS_Store/
+*stack*

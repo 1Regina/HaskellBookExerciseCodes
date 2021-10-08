@@ -1,0 +1,16 @@
+-- >>>  pure 1 :: Either e Int
+-- Right 1
+--
+
+-- >>>  Right (+1) <*> Right 1
+-- Right 2
+--
+-- >>>  Right (+1) <*> Left ":("
+-- Left ":("
+--
+-- >>>  Left ":(" <*> Right 1
+-- Left ":("
+--
+-- >>>   Left ":(" <*> Left "sadface.png"
+-- Left ":("
+--
